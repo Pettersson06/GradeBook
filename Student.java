@@ -26,11 +26,11 @@ public class Student {
     double average = calculateAverage();
     System.out.println(name + " has an average of " + average + "!");
     if (average < 4.5) {
-      System.out.println("You passed the class!");
+      System.out.println("He passed the class!");
     } else if (average > 4.5) {
-      System.out.println("You failed the class!");
+      System.out.println("He failed the class!");
     } else {
-      System.out.println("The teachers need to discuss if you pass the class or not!");
+      System.out.println("The teachers need to discuss if he will pass the class or not!");
     }
   }
 }
