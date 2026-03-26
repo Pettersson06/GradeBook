@@ -1,27 +1,24 @@
+import java.util.ArrayList;
+
 public class Student {
   String name;
-  double[] grades;
-  int numGrades;
-  int gradeCount;
+  ArrayList<Double> grades = new ArrayList<>();
 
-  public Student(String name, int numGrades) {
+  public Student(String name) {
     this.name = name;
-    this.numGrades = numGrades;
-    this.grades = new double[numGrades];
-    gradeCount = 0;
+    this.grades = new ArrayList<>();
   }
 
   public void addGrade(double grade) {
-    this.grades[gradeCount] = grade;
-    gradeCount++;
+    grades.add(grade);
   }
 
   public double calculateAverage() {
     double total = 0.0;
-    for (int i = 0; i < grades.length; i++) {
-      total = total + grades[i];
+    for (int i = 0; i < grades.size(); i++) {
+      total = total + grades.get(i);
     }
-    double average = total / grades.length;
+    double average = total / grades.size();
     return average;
   }
 
