@@ -20,8 +20,9 @@ public class Main {
       students.add(student);
     }
     for (Student student : students) {
+      student.printName(); 
       student.printResult();
     }
+    scanner.close();
   }
-  scanner.close();
 }

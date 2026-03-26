@@ -1,11 +1,10 @@
 import java.util.ArrayList;
 
-public class Student {
-  String name;
+public class Student extends Person{
   ArrayList<Double> grades = new ArrayList<>();
 
   public Student(String name) {
-    this.name = name;
+    super(name);
     this.grades = new ArrayList<>();
   }
 
