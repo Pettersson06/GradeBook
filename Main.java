@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        ArrayList<Student> students = new ArrayList<>();
+        ArrayList<Person> people = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
         System.out.println("How many Students do you want to enter?");
         int numStudents = scanner.nextInt();
@@ -18,15 +18,13 @@ public class Main {
                 System.out.println("Enter a grade!");
                 student.addGrade(scanner.nextDouble());
             }
-            students.add(student);
-        }
-        for (Student student : students) {
-            student.printName();
-            student.printResult();
+            people.add(student);
         }
         Teacher teacher = new Teacher("Schmidt", "Computer Science");
-        teacher.printInfo();
-        teacher.printName();
+        people.add(teacher);
+        for (Person person : people) {
+            person.printName();
+        }
         scanner.close();
     }
 }
